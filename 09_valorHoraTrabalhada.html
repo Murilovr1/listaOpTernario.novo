@@ -8,11 +8,16 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-
+    const horasSemanal = parseInt(prompt("Quantidade de hora trabalhadas semanalmente").trim());
+    const salarioHr = parseFloat(prompt("Qual seu salário").trim())
 
     //Processamento
+    let salario20 = salarioHr + (salarioHr * 0.20);
+    let salario30 = salarioHr + (salarioHr * 0.30); 
 
+    let mensagem = (horasSemanal <= 45) ? `Não houve adicional, R$${salarioHr}` : (horasSemanal <= 60) ? `Houve um adicional o total é de ${salario20.toFixed(2).replace(".",",")}, R$${(salario20/horasSemanal).toFixed(2).replace(".",",")} por hora` : `Houve um adicional o total é de  ${salario30.toFixed(2).replace(".",",")}, R$${(salario30/horasSemanal).toFixed(2).replace(".",",")} por hora`;
     
     //Saída
+    document.write(mensagem)
 
 </script>
