@@ -8,11 +8,17 @@
     // - cães grandes: fator 7.
 
     //Entrada
-
+    const idade = prompt("Qual a idade do cão?").trim
+    const porte = prompt("Qual o porte dele?P,M,G").trim().toUpperCase
 
     //Processamento
-
+    let mensagem=(porte=="P")?`Sua idade é de ${(idade*5)} anos`:
+    (porte=="M")?`Sua idade é de ${(idade*6)} anos`:
+    (porte=="P")?`Sua idade é de ${(idade*5)} anos`:
+    "Resposta invalida"
     
     //Saída
+    document.write(mensagem)
+
 
 </script>

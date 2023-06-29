@@ -10,11 +10,18 @@
     // Entre 5.9 e zero            E
 
     //Entrada
-
-
+    const nota = parseInt(prompt("Qual a sua nota").replace(",",".").trim());
+     
     //Processamento
-
     
-    //Saída
+    let mensagem = (nota<=10 && nota <=9)? "Nota A":
+    (nota<9 && nota <=8) ? "Nota A":
+    (nota<8 && nota <=7) ? "Nota B":
+    (nota<7 && nota <=6) ? "Nota C":
+    (nota<6 && nota <=0) ? "Nota D":
+    "Resposta invalida"
+
+//saída
+document.write(mensagem);
 
 </script>

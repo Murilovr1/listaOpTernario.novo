@@ -4,11 +4,17 @@
     //Construa um algoritmo que leia dois números inteiros. Verifique qual dos dois números é maior e o escreva.
 
     //Entrada
+    const num1 = parseInt(prompt("Insira um número"));
+    const num2 = parseInt(prompt("Insira outro número por favor"));
 
     
     //Processamento
+    let mensagemFinal = (isNaN(num1) || isNaN(num2)) ? `Insira apenas números` : 
+     (num1 > num2) ? `O ${num1} é maior que ${num2}` : 
+     (num1 < num2) `O número ${num2} é maior que ${num1}` ;
 
     
     //Saída
+    alert(`${mensagemFinal}`)
     
 </script>

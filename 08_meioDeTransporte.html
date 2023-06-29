@@ -6,12 +6,23 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
-
+    const litro = prompt("Preço combustivel")
+    const quant = prompt("Quantos litros gasta para ir ao trabalho?")
+    const tp = prompt("Quantos é o tranporte publico")
+    let precoCarro = litro*quant
 
     //Processamento
+    let mensagem=(precoCarro > tp)?`Melhor ir de transporte público, ficará R$${tp.toFixed(2).replace(".",",")}`:
+    (precoCarro < tp)?`Melhor ir de carro, ficará R$${precoCarro.toFixed(2).replace(".",",")}`:
+    (precoCarro=tp)?`Os dois tem o mesmo valor, R$${tp}`:
+    "Resposta invalida"
+    
+
 
     
     //Saída
+
+    document.write(mensagem)
 
     
 </script>

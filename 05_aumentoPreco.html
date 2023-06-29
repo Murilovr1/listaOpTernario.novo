@@ -8,11 +8,20 @@
         //- acima de 1500: aumento de 5 %
     
     //Entrada
-
+    const preco = parseInt(prompt("Insira um número"));
+     const valor1 = preco * (20 / 100);
+     const valor2 = preco * (15 / 100);
+     const valor3 = preco * (10 / 100);
+     const valor4 = preco * (5 / 100);
 
     //Processamento
-
+    let mensagemFinal =  (preco <= 280) ? `Esse valor teve um aumento de R$${valor1}` : 
+    (280 < preco <= 700) ? `Esse valor teve um aumento de R${valor2}` : 
+    (700 < preco <= 1500) ? `Esse valor teve um aumento de R$${valor3}` : 
+    (preco > 1500) ? `Esse valor teve um aumento de R$${valor4}` : 
+    ``
     
     //Saída
-
+    alert(mensagemFinal);
+  
 </script>
